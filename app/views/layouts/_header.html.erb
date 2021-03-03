@@ -1,7 +1,9 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top bg-warning">
   <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
     <nav>
+      <%= link_to '#', id: "logo" do %>
+      　<%= image_tag "app-title.png", class: 'sized' %>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   '#' %></li>
         <li><%= link_to "Help",   '#' %></li>

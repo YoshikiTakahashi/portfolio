@@ -1,2 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+}
+
+.sized {
+  width: 200px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.rounded {
+  border-radius: 0.5rem !important;
+}

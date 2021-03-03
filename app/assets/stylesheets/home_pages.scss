@@ -1,3 +1,14 @@
 // Place all the styles related to the HomePages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.back-img {
+  background-image: image-url('pc.png');
+  height: 570px;
+  background-size:cover;
+  background-position: center;
+}
+
+.title-text {
+  margin-top: 120px;
+}
