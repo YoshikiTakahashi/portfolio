@@ -1,3 +1,3 @@
-# RSpec.describe "home_pages/home.html.erb", type: :view do
+# RSpec.describe User, type: :model do
 #   pending "add some examples to (or delete) #{__FILE__}"
 # end
