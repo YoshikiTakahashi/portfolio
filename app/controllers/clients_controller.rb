@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :logged_in_user, only: [:index, :getclient]
+  before_action :logged_in_user, only: [:index, :getclient, :destroy]
   def index
   end
 
@@ -11,24 +11,22 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
-      redirect_to clients_index_path
-    else
+      flash[:success] = "登録しました！"
       redirect_to clients_index_path
     end
+  end
+
+  def destroy
+    client = @client.destroy
+    flash[:success] = "#{client.company} を削除しました!"
+    redirect_to clients_index_path
   end
 
   private
 
   def client_params
     params.fetch(:client, {}).permit(
-        :company,:name,:phone,:email
+        :company,:name,:phone,:email,:user_id
       )
-  end
-
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end
   end
 end

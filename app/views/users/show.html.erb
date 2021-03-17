@@ -1,10 +1,12 @@
 <div class="container">
-  <h1>
-    <%= @user.name %>
-  </h1>
-  <h1>
-    <%= @user.email %>
-  </h1>
+  <div>
+    <h1>
+      名前　：<%= @user.name %>
+    </h1>
+    <h1>
+      メール：<%= @user.email %>
+    </h1>
+  </div>
 
   <div class="margin-top30">
     <% if current_user == @user %>
@@ -13,6 +15,14 @@
   </div>
 
   <div class="margin-top30">
-    <%= link_to "Users", users_path, class: "btn btn-lg btn-success" %>
+    <%= link_to "登録者一覧", users_path, class: "btn btn-lg btn-success" %>
   </div>
+
+  <div class="margin-top30">
+    <%= link_to "会社情報", clients_index_path, class: "btn btn-lg btn-success" %>
+  </div>
+</div>
+
+<div id="app">
+  <%= javascript_pack_tag 'user_vue' %>
 </div>

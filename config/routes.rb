@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get 'clients/index'
   get 'clients/getclient'
   post 'clients/create'
+  delete 'clients/destroy'
 end
