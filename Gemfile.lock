@@ -94,6 +94,8 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
+    faker (2.17.0)
+      i18n (>= 1.6, < 2)
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -243,6 +245,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    tether-rails (1.4.0)
+      rails (>= 3.1)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -281,11 +285,13 @@ DEPENDENCIES
   byebug
   capybara
   factory_bot_rails
+  faker
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
   mail-iso-2022-jp
   pg (~> 1.1)
+  popper_js
   pry-byebug
   pry-doc
   pry-rails
@@ -296,6 +302,7 @@ DEPENDENCIES
   rubocop-airbnb
   sass-rails (>= 6)
   spring
+  tether-rails
   turbolinks (~> 5)
   tzinfo-data
   uglifier

@@ -15,6 +15,9 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'bcrypt', '3.1.13'
 gem 'mail-iso-2022-jp'
+gem 'faker'
+gem 'popper_js'
+gem 'tether-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
