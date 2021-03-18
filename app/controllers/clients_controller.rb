@@ -17,16 +17,18 @@ class ClientsController < ApplicationController
   end
 
   def destroy
-    client = @client.destroy
-    flash[:success] = "#{client.company} を削除しました!"
-    redirect_to clients_index_path
+    @client = Client.find(params[:id])
+    if @client.destroy
+      flash[:success] = "#{client.company} を削除しました!"
+      redirect_to clients_index_path
+    end
   end
 
   private
 
   def client_params
     params.fetch(:client, {}).permit(
-        :company,:name,:phone,:email,:user_id
-      )
+      :company, :name, :phone, :email, :user_id
+    )
   end
 end

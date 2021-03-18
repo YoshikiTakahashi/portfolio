@@ -50,7 +50,7 @@
         </tr>
       </div>
       <div class="col-md-8 infoWrap">
-        <div class="infoBox animate__animated">
+        <div class="infoBox">
           <p>ユーザー情報</p>
           <div id="clientInfo">
             <table>
@@ -106,7 +106,6 @@ export default {
     },
     createClient: function() {
       if (!this.bword) return;
-
       for(var i in this.clients) {
         var client = this.clients[i];
         if (client.company.toLowerCase() == this.bword.toLowerCase()) {
@@ -114,11 +113,10 @@ export default {
           return;
         }
       }
-
       axios.post('/clients/create', { client: {company: this.bword, name: this.cword, phone: this.pword, email: this.aword } }).then((response) => {
         var luser = {company: this.bword, name: this.cword, phone: this.pword, email: this.aword};
         this.clients.unshift(luser);
-        this.cword = '';
+        this.bword = '', this.cword = '', this.pword = '', this.aword = '';
       })
     },
     showClient: function(d) {
@@ -129,7 +127,7 @@ export default {
           this.result = client;
         }
       }
-    }
+    },
   },
   computed: {
     filteredClients: function() {
