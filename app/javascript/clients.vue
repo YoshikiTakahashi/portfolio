@@ -44,7 +44,8 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4 scroller">
+      <div class="col-md-4 scroller infoBox">
+        <p>会社名</p>
         <tr class="clientsList" v-for="client in filteredClients" :key="client.id">
           <td class="nameList" v-on:click="showClient(client.company)">{{ client.company }}</td>
         </tr>

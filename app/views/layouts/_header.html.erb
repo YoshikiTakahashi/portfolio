@@ -11,8 +11,8 @@
         <ul class="navbar-nav mt-2 mt-lg-0">
           <% if logged_in? %>
             <li class="nav-item active"><%= link_to "Home", home_pages_home_path, class: "nav-link" %></li>
-            <li class="nav-item"><%= link_to "Profile", current_user, class: "nav-link" %></li>
-            <li class="nav-item"><%= link_to "会社情報", clients_index_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "個人情報", current_user, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "会社登録", clients_index_path, class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
           <% else %>
             <li class="nav-item active"><%= link_to "Home", home_pages_home_path, class: "nav-link" %></li>

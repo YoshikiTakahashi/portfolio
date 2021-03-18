@@ -6,13 +6,14 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4 scroller">
+      <div class="col-md-4 scroller infoBox">
+        <p>会社名</p>
         <tr class="clientsList" v-for="client in filteredClients" :key="client.id">
           <td class="nameList" v-on:click="showClient(client.company)">{{ client.company }}</td>
         </tr>
       </div>
       <div class="col-md-8 infoWrap">
-        <div class="infoBox animate__animated">
+        <div class="infoBox">
           <p>ユーザー情報</p>
           <div id="clientInfo">
             <table>
