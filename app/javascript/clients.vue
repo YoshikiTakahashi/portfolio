@@ -43,33 +43,33 @@
       <input class="form-control" type="text" v-model="keyword" placeholder="Search client ....">
     </div>
 
-    <div class="row">
+    <div class="row d-flex justify-content-around">
       <div class="col-md-4 scroller infoBox">
         <p>会社名</p>
         <tr class="clientsList" v-for="client in filteredClients" :key="client.id">
           <td class="nameList" v-on:click="showClient(client.company)">{{ client.company }}</td>
         </tr>
       </div>
-      <div class="col-md-8 infoWrap">
-        <div class="infoBox">
+      <div class="col-md-4 infoBox userBox">
+        <div>
           <p>ユーザー情報</p>
           <div id="clientInfo">
             <table>
               <tr>
-                <td>会社名</td>
-                <td>{{ result.company }}</td>
+                <td>会社名：</td>
+                <td class="tb">{{ result.company }}</td>
               </tr>
               <tr>
-                <td>名前</td>
-                <td>{{ result.name }}</td>
+                <td>名前：</td>
+                <td class="tb">{{ result.name }}</td>
               </tr>
               <tr>
-                <td>電話番号</td>
-                <td>{{ result.phone }}</td>
+                <td>電話番号：</td>
+                <td class="tb">{{ result.phone }}</td>
               </tr>
               <tr>
-                <td>email</td>
-                <td>{{ result.email }}</td>
+                <td>email：</td>
+                <td class="tb">{{ result.email }}</td>
               </tr>
             </table>
           </div>
