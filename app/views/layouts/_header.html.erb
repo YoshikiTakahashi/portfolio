@@ -1,7 +1,7 @@
 <header class="bg-light">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light height">
-      <%= link_to home_pages_home_path, id: "logo" do %>
+      <%= link_to "/", id: "logo" do %>
         <%= image_tag "app-title.png", class: 'sized' %>
       <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,12 +10,12 @@
       <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarTogglerDemo01">
         <ul class="navbar-nav mt-2 mt-lg-0 header-font">
           <% if logged_in? %>
-            <li class="nav-item active"><%= link_to "Home", home_pages_home_path, class: "nav-link" %></li>
+            <li class="nav-item active"><%= link_to "Home", "/", class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "個人情報", current_user, class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "会社登録", clients_index_path, class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %></li>
           <% else %>
-            <li class="nav-item active"><%= link_to "Home", home_pages_home_path, class: "nav-link" %></li>
+            <li class="nav-item active"><%= link_to "Home", "/", class: "nav-link" %></li>
             <li class="nav-item"><%= link_to "Log in", login_path, class: "nav-link" %></li>
           <% end %>
         </ul>
