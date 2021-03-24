@@ -1,24 +1,27 @@
-# README
+# README  
+==================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要  
+---------------------------------
+顧客の会社情報を登録し、管理できるアプリケーションです。
 
-Things you may want to cover:
 
-* Ruby version
+[アプリURL]: <https://portfolio-0222.herokuapp.com/>
 
-* System dependencies
 
-* Configuration
+## テスト用Loginアカウント(管理者権限あり)  
+---------------------------------
+[メールアドレス]: guest@guest.com  
+[パスワード]: foobar
 
-* Database creation
 
-* Database initialization
+## 利用方法  
+---------------------------------
+新規登録にて、自身のプロフィールなどを入力し登録します。  
+会社情報（会社名、担当者名、電話番号、メールアドレス）を追加できます。  
+登録した会社情報を追加することができます。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 目指した課題解決  
+---------------------------------
+営業職において、顧客情報を管理することは重要なことである為、 会社情報を簡単に登録でき、探し出せるようにして業務効率の改善を目指しました。
